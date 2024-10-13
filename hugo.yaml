@@ -1,0 +1,111 @@
+baseURL: https://samirsomer.dev/
+languageCode: en-us
+title: The Internet Mechanic
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  cover:
+    responsiveImages: true
+    linkFullImages: true
+  homeInfoParams:
+    Title: Hi!
+    Content: Welcome to my Blog ...
+  author: Me
+  description: "The Internet Mechanic Blog"
+  keywords: [Blog, Portfolio, samirsomer]
+  images: ["img/samirsomer.jpg"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: dark
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Samir Abdullatif
+    subtitle: "Welcome!"
+    imageUrl: "img/samirsomer.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+  
+
+  socialIcons: # optional
+    - name: "Linkedin"
+      url: "https://linkedin.com/in/samirsomer"
+    - name: "X"
+      url: "https://x.com/samirsomer"
+    - name: "Github"
+      url: "https://github.com/samirsomer"
+
+
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 30
+
+fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+
